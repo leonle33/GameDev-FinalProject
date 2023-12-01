@@ -31,6 +31,11 @@ public class VictoryManager : MonoBehaviour
 
     }
 
+    public void NextLevelDay1()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void NextLevelDay2()
     {
         // EnemyHealth.count = 0;
@@ -43,6 +48,6 @@ public class VictoryManager : MonoBehaviour
     }
     public void NextLevelDay4()
     {
-        SceneManager.LoadScene("Day4");
+        SceneManager.LoadScene(4);
     }
 }

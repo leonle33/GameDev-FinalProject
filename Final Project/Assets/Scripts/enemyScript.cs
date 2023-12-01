@@ -7,6 +7,7 @@ public class enemyScript : MonoBehaviour
     [SerializeField] EnemyHealth enemyHealth;
     // [SerializeField] PlayerHealth playerHealth;
     //public PlayerHealth playerHealth;
+    [SerializeField] AudioClip playerHit;
 
     //Follow target
     [SerializeField] float moveSpeed = 2f;
@@ -94,18 +95,23 @@ public class enemyScript : MonoBehaviour
                 Destroy(other.gameObject);
             }
 
+
             if (other.tag == "Player" && this.tag == "Enemy")
             {
                 playerHealth.TakeDamage(1f);
+                GetComponent<AudioSource>().PlayOneShot(playerHit);
             }
             else if (other.tag == "Player" && this.tag == "BlueKaren")
             {
                 playerHealth.TakeDamage(0.5f);
+                GetComponent<AudioSource>().PlayOneShot(playerHit);
             }
             else if (other.tag == "Player" && this.tag == "RedKaren")
             {
                 playerHealth.TakeDamage(2f);
+                GetComponent<AudioSource>().PlayOneShot(playerHit);
             }
+
         }
 
 

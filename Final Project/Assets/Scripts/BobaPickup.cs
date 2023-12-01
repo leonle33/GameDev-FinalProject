@@ -14,7 +14,7 @@ public class BobaPickup : MonoBehaviour
         {
             GetComponent<AudioSource>().PlayOneShot(ammo);
 
-            //AudioSource.PlayClipAtPoint(ammo, transform.position);
+            AudioSource.PlayClipAtPoint(ammo, transform.position);
             if (this.tag == "FloorBoba")
             {
                 projectileThrower.AddBoba(5, 0, 0);

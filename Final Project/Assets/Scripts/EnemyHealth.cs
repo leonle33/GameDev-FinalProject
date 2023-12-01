@@ -55,6 +55,7 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        score = count;
 
         floatingHB.UpdateHealthBar(currentHealth, maxHealth);
     }
